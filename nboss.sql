@@ -84,7 +84,7 @@ CREATE TABLE `cart` (
   KEY `user_id` (`user_id`),
   KEY `ix_cart_addtime` (`addtime`),
   CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`goods_id`) REFERENCES `devices` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `cart` (
 
 LOCK TABLES `cart` WRITE;
 /*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-INSERT INTO `cart` VALUES (112,10,7,NULL,'2021-03-28 23:24:28');
+INSERT INTO `cart` VALUES (112,10,7,NULL,'2021-03-28 23:24:28'),(113,11,7,NULL,'2021-03-29 12:39:38'),(114,12,7,NULL,'2021-03-29 12:39:45'),(115,13,7,NULL,'2021-03-29 12:39:49'),(116,21,7,NULL,'2021-03-29 12:39:54'),(117,22,7,NULL,'2021-03-29 12:39:57'),(118,15,7,NULL,'2021-03-29 12:40:03'),(119,20,7,NULL,'2021-03-29 12:40:08');
 /*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,7 +127,7 @@ CREATE TABLE `devices` (
   KEY `devices_addtime_index` (`addtime`),
   CONSTRAINT `devices_subcat__fk` FOREIGN KEY (`subcat_id`) REFERENCES `subcat` (`id`),
   CONSTRAINT `devices_supercat_id_fk` FOREIGN KEY (`supercat_id`) REFERENCES `supercat` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,7 +136,7 @@ CREATE TABLE `devices` (
 
 LOCK TABLES `devices` WRITE;
 /*!40000 ALTER TABLE `devices` DISABLE KEYS */;
-INSERT INTO `devices` VALUES (10,'金桥#6 B101 A07','101.jpg','DS-LITE服务器','2021-03-28 23:23:37',0,1,1,'0',NULL,'135.251.196.198',NULL,NULL,NULL,'tester','123456');
+INSERT INTO `devices` VALUES (10,'金桥B6-L1-IPv6 Server','101.jpg','DS-LITE服务器','2021-03-28 23:23:37',1,1,1,'0',NULL,'135.251.196.198',NULL,NULL,NULL,'tester','123456'),(11,'金桥B6-L1-Gen9','102.jpg','Win Server 2019','2021-03-29 10:28:32',0,2,1,'0',NULL,'135.251.163.200',NULL,NULL,NULL,'admin','test@123'),(12,'金桥B6-L1-DiskStation Manager','101.jpg','XPEnoboot','2021-03-29 10:31:06',0,1,1,'0',NULL,'10.10.10.10',NULL,NULL,NULL,'admin','xponnas'),(13,'金桥B6-L2-IPv6 Server(80)','101.jpg','10G网卡的IPv6 Server','2021-03-29 10:32:45',0,1,1,'0',NULL,'10.9.74.138',NULL,NULL,NULL,'root','test@123'),(14,'金桥B6-L1-ShaoLan','107.jpg','上连口： nt-a:xfp:2','2021-03-29 10:38:06',3,8,4,'0',NULL,'135.251.163.150',NULL,NULL,NULL,'isadmin','6空格'),(15,'金桥B6-L2-Deliangw','107.jpg','上连口： nt-a:xfp:1','2021-03-29 10:42:59',1,8,4,'0',NULL,'135.251.193.190',NULL,NULL,NULL,'isadmin','ans#150'),(16,'金桥B6-L1-Qiankunx','107.jpg','上连口： nt-a:xfp:1','2021-03-29 10:44:38',0,8,4,'0',NULL,'135.251.163.159',NULL,NULL,NULL,'isadmin','6空格'),(17,'金桥B6-L1-Zhaoqi','107.jpg','上连口： ntio-1:xfp:2','2021-03-29 10:46:28',0,8,4,'0',NULL,'135.251.163.188',NULL,NULL,NULL,'isadmin','6空格'),(18,'金桥B6-L2-Xinhuay','107.jpg','上连口： nt-a:xfp:2','2021-03-29 11:06:22',0,8,4,'0',NULL,'135.251.202.15',NULL,NULL,NULL,'isadmin','6空格'),(19,'金桥B6-L2-Yongqiny','107.jpg','上连口： nt-a:xfp:3 ','2021-03-29 11:08:33',0,8,4,'0',NULL,'135.251.200.72',NULL,NULL,NULL,'isadmin','6空格'),(20,'金桥B6-L1-deliangw','109.jpg','桌面端口： 90S07','2021-03-29 12:18:18',5,11,5,'0',NULL,'192.168.18.1',NULL,NULL,NULL,'superadmin','Telc@Admin2#'),(21,'金桥B6-L1-switch1','106.jpg','一楼交换机','2021-03-29 12:29:22',1,4,2,'0',NULL,'135.251.163.190',NULL,NULL,NULL,'admin','switch'),(22,'金桥B6-L2-switch1','106.jpg','二楼交换机','2021-03-29 12:37:35',1,15,2,'0',NULL,'10.9.74.139',NULL,NULL,NULL,'admin','switch');
 /*!40000 ALTER TABLE `devices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -311,8 +311,8 @@ CREATE TABLE `subcat` (
   PRIMARY KEY (`id`),
   KEY `super_cat_id` (`super_cat_id`),
   KEY `ix_subcat_addtime` (`addtime`),
-  CONSTRAINT `super_cat_id_fk` FOREIGN KEY (`super_cat_id`) REFERENCES `supercat` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+  CONSTRAINT `subcat_cat_id_fk` FOREIGN KEY (`super_cat_id`) REFERENCES `supercat` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -321,7 +321,7 @@ CREATE TABLE `subcat` (
 
 LOCK TABLES `subcat` WRITE;
 /*!40000 ALTER TABLE `subcat` DISABLE KEYS */;
-INSERT INTO `subcat` VALUES (1,'Centos','2021-03-28 12:52:01',1),(2,'Windows','2021-03-28 12:52:44',1),(3,'SpeedTest','2021-03-28 12:52:52',1),(4,'OMNI','2021-03-28 12:53:05',2),(5,'华为','2021-03-28 12:53:17',2),(7,'Cisco','2021-03-28 12:59:42',2);
+INSERT INTO `subcat` VALUES (1,'Centos','2021-03-28 12:52:01',1),(2,'Windows','2021-03-28 12:52:44',1),(3,'SpeedTest','2021-03-28 12:52:52',1),(4,'OMNI 6850E-24','2021-03-28 12:53:05',2),(5,'华为','2021-03-28 12:53:17',2),(7,'Cisco','2021-03-28 12:59:42',2),(8,'7360 FX8','2021-03-29 02:33:56',4),(9,'7360 FX16','2021-03-29 02:34:12',4),(10,'7342','2021-03-29 02:34:25',4),(11,'Beacon 1.1','2021-03-29 04:15:26',5),(12,'Beacon 1','2021-03-29 04:15:52',5),(13,'Beacon 3','2021-03-29 04:16:04',5),(14,'Beacon 6','2021-03-29 04:16:13',5),(15,'OMNI 6860-48','2021-03-29 04:22:23',2);
 /*!40000 ALTER TABLE `subcat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -393,4 +393,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-28 23:39:34
+-- Dump completed on 2021-03-30 17:18:26

@@ -25,3 +25,114 @@ Fatal Python error: initfsencoding: unable to load the file system codec
 ModuleNotFoundError: No module named 'encodings'
 
 Current thread 0x00007f19a7f80780 (most recent call first):
+*** Starting uWSGI 2.0.19.1 (64bit) on [Tue Mar 30 17:17:17 2021] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 26 March 2021 05:50:09
+os: Linux-3.10.0-862.el7.x86_64 #1 SMP Fri Apr 20 16:44:24 UTC 2018
+nodename: dslite-nsb-com
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /root/WebServer/Nboss
+writing pidfile to /root/WebServer/Nboss//uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/WebServer/Nboss/
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 999999
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 bound to TCP address 0.0.0.0:8001 fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.0 (default, Mar 26 2021, 13:12:46)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+PEP 405 virtualenv detected: /root/WebServer/Nboss/venv
+Set PythonHome to /root/WebServer/Nboss/venv
+Python main interpreter initialized at 0x228ccc0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x228ccc0 pid: 129692 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 129692)
+spawned uWSGI worker 1 (pid: 129693, cores: 2)
+spawned uWSGI worker 2 (pid: 129694, cores: 2)
+spawned uWSGI worker 3 (pid: 129695, cores: 2)
+spawned uWSGI worker 4 (pid: 129697, cores: 2)
+*** Stats server enabled on /root/WebServer/Nboss//uwsgi.status fd: 18 ***
+spawned uWSGI http 1 (pid: 129700)
+[pid: 129693|app: 0|req: 1/1] 10.9.73.104 () {42 vars in 812 bytes} [Tue Mar 30 17:17:37 2021] GET / => generated 32993 bytes in 168 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 129693|app: 0|req: 2/2] 10.9.73.104 () {46 vars in 926 bytes} [Tue Mar 30 17:17:37 2021] GET /static/home/js/jsArr01.js => generated 296681 bytes in 12 msecs via sendfile() (HTTP/1.1 200) 8 headers in 308 bytes (0 switches on core 1)
+[pid: 129694|app: 0|req: 2/3] 10.9.73.104 () {46 vars in 926 bytes} [Tue Mar 30 17:17:37 2021] GET /static/home/js/jsArr02.js => generated 244013 bytes in 11 msecs via sendfile() (HTTP/1.1 200) 8 headers in 310 bytes (0 switches on core 1)
+[pid: 129695|app: 0|req: 2/4] 10.9.73.104 () {42 vars in 826 bytes} [Tue Mar 30 17:17:37 2021] GET /static/home/css/mr-01.css => generated 56184 bytes in 22 msecs via sendfile() (HTTP/1.1 200) 8 headers in 309 bytes (0 switches on core 0)
+[pid: 129695|app: 0|req: 2/5] 10.9.73.104 () {46 vars in 923 bytes} [Tue Mar 30 17:17:37 2021] GET /static/home/js/module.js => generated 19610 bytes in 19 msecs via sendfile() (HTTP/1.1 200) 8 headers in 308 bytes (0 switches on core 1)
+[pid: 129694|app: 0|req: 2/6] 10.9.73.104 () {46 vars in 917 bytes} [Tue Mar 30 17:17:37 2021] GET /static/home/js/tab.js => generated 17945 bytes in 20 msecs via sendfile() (HTTP/1.1 200) 8 headers in 308 bytes (0 switches on core 0)
+[pid: 129693|app: 0|req: 3/7] 10.9.73.104 () {42 vars in 819 bytes} [Tue Mar 30 17:17:37 2021] GET /static/home/images/search.png => generated 3310 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 8 headers in 293 bytes (0 switches on core 0)
+[pid: 129695|app: 0|req: 4/8] 10.9.73.104 () {42 vars in 815 bytes} [Tue Mar 30 17:17:37 2021] GET /static/images/goods/106.jpg => generated 86437 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 8 headers in 293 bytes (0 switches on core 1)
+[pid: 129695|app: 0|req: 4/9] 10.9.73.104 () {42 vars in 815 bytes} [Tue Mar 30 17:17:37 2021] GET /static/images/goods/102.jpg => generated 125571 bytes in 5 msecs via sendfile() (HTTP/1.1 200) 8 headers in 295 bytes (0 switches on core 0)
+[pid: 129693|app: 0|req: 5/10] 10.9.73.104 () {42 vars in 815 bytes} [Tue Mar 30 17:17:37 2021] GET /static/images/goods/107.jpg => generated 23673 bytes in 5 msecs via sendfile() (HTTP/1.1 200) 8 headers in 293 bytes (0 switches on core 1)
+[pid: 129693|app: 0|req: 5/11] 10.9.73.104 () {42 vars in 815 bytes} [Tue Mar 30 17:17:37 2021] GET /static/images/goods/109.jpg => generated 8537 bytes in 6 msecs via sendfile() (HTTP/1.1 200) 8 headers in 291 bytes (0 switches on core 0)
+[pid: 129697|app: 0|req: 2/12] 10.9.73.104 () {42 vars in 815 bytes} [Tue Mar 30 17:17:37 2021] GET /static/images/goods/101.jpg => generated 79558 bytes in 28 msecs via sendfile() (HTTP/1.1 200) 8 headers in 295 bytes (0 switches on core 1)
+[pid: 129697|app: 0|req: 2/13] 10.9.73.104 () {42 vars in 817 bytes} [Tue Mar 30 17:17:37 2021] GET /static/home/images/Nboss.PNG => generated 56582 bytes in 35 msecs via sendfile() (HTTP/1.1 200) 8 headers in 294 bytes (0 switches on core 0)
+Tue Mar 30 17:18:21 2021 - *** /root/WebServer/Nboss/ has been touched... grace them all !!! ***
+gateway "uWSGI http 1" has been buried (pid: 129700)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 129693)...
+Gracefully killing worker 3 (pid: 129695)...
+Gracefully killing worker 4 (pid: 129697)...
+Gracefully killing worker 2 (pid: 129694)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/WebServer/Nboss
+closing all non-uwsgi socket fds > 2 (max_fd = 999999)...
+found fd 6 mapped to socket 0 (0.0.0.0:8001)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /root/WebServer/Nboss/uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Tue Mar 30 17:18:23 2021] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 26 March 2021 05:50:09
+os: Linux-3.10.0-862.el7.x86_64 #1 SMP Fri Apr 20 16:44:24 UTC 2018
+nodename: dslite-nsb-com
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /root/WebServer/Nboss
+detected binary path: /usr/local/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/WebServer/Nboss/
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 999999
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited INET address 0.0.0.0:8001 fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.0 (default, Mar 26 2021, 13:12:46)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+PEP 405 virtualenv detected: /root/WebServer/Nboss/venv
+Set PythonHome to /root/WebServer/Nboss/venv
+Python main interpreter initialized at 0xb75650
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xb75650 pid: 129692 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 129692)
+spawned uWSGI worker 1 (pid: 129857, cores: 2)
+spawned uWSGI worker 2 (pid: 129858, cores: 2)
+spawned uWSGI worker 3 (pid: 129859, cores: 2)
+spawned uWSGI worker 4 (pid: 129860, cores: 2)
+*** Stats server enabled on /root/WebServer/Nboss//uwsgi.status fd: 18 ***
+spawned uWSGI http 1 (pid: 129863)
