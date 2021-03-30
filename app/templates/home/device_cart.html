@@ -1,0 +1,56 @@
+{% extends "home/common.html" %}
+{% block content %}
+	<!-- //网站头部 -->
+    <div id="mr-mainbody" class="container mr-mainbody">
+        <div class="row">
+            <!-- 页面主体内容 -->
+            <div id="mr-content" class="mr-content col-xs-12">
+                <div id="mrshop" class="mrshop common-home">
+                    <div class="container_oc">
+                        <div class="row">
+                            <div  class="col-sm-12">
+                                <h1>我的设备</h1>
+                                <!-- 显示选中的设备 -->
+                                <div class="table-responsive cart-info">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <td class="text-center image">设备</td>
+                                                <td class="text-left name">名称</td>
+                                                <td class="text-left name">管理IP</td>
+                                                <td class="text-left quantity">状态</td>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <!-- 遍历我的设备并显示 -->
+                                            {% for item in cart %}
+                                            <tr>
+                                                <td class="text-center image" width="20%">
+                                                    <a href="{{url_for('home.devices_detail',id=item.devices.id)}}">
+                                                    <img width="80px" src="{{url_for('static',filename='images/goods/'+item.devices.picture)}}"> </a>
+                                                </td>
+                                                <td class="text-left name">
+                                                    <a href="{{url_for('home.devices_detail',id=item.devices.id)}}">{{item.devices.name}}</a>
+                                                </td>
+                                                <td class="text-left name">
+                                                    <a href="{{url_for('home.devices_detail',id=item.devices.id)}}">{{item.devices.device_ip}}</a>
+                                                </td>
+                                                <td class="text-left name">
+                                                    {{item.devices.status}}
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                            <!-- //遍历我的设备并显示 -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //页面主体内容 -->
+        </div>
+    </div>
+{% endblock %}
